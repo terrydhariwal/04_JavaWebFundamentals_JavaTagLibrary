@@ -1,6 +1,9 @@
+<%--<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %> <!-- use taglib directive to import the Java Core Tag Library -->--%> <!-- This works -->
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %> <!-- use taglib directive to import the Java Core Tag Library --> <!-- This also works -->
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="io.nosqlyessql.mvc.model.User" %>
 <%@ page import="java.util.Calendar" %> <!-- example of importing standard Java classes (like our custom User above) -->
+
 <!DOCTYPE html>
 <html>
 
@@ -26,6 +29,12 @@
   <div class="container">
 
     <h1>${ ProductName }</h1>
+
+    <div class="container">
+      <h4>Java Tag Library Hello world example</h4>
+      <c:out value="Hello world!!" />
+      <br/><br/>
+    </div>
 
     <div class="row-fluid">
       <div class="col-md-9">

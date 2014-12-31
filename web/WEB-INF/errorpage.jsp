@@ -1,6 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isErrorPage="true"  %>
 <%@ page import="io.nosqlyessql.mvc.model.User" %>
 <%@ page import="java.util.Calendar" %> <!-- example of importing standard Java classes (like our custom User above) -->
+<%--<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %> <!-- use taglib directive to import the Java Core Tag Library -->--%> <!-- This works -->
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %> <!-- use taglib directive to import the Java Core Tag Library --> <!-- This also works -->
 <!DOCTYPE html>
 <html>
 
@@ -27,6 +29,13 @@
             <%= calendar.getTime().toString() %> <br/><br/> <!-- Java expression to output time -->
             <%= exception.getMessage() %>
         </div>
+    </div>
+
+    <div class="container">
+        <br/><br/>
+        <h4>Java Tag Library Hello world example</h4>
+        <c:out value="Hello world!!" />
+        <br/><br/>
     </div>
 
     <div class="container">
