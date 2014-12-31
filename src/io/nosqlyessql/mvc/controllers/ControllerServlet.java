@@ -43,22 +43,39 @@ public class ControllerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.print("in ControllerServlet doGet");
-        User user = new User();
-        user.setName("Terry");
-        user.setEmail("terry@nosqlyessql.io");
 
         RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
-        //We need to pass the bean to the view (/index.jsp)
-        //1. We can pass the bean through global scope - all requests (jsp or servlet) can see it
-        getServletContext().setAttribute("global_user", user);
-        //2. Or pass via session scope - all requests for this user (session) can see it
-        request.getSession().setAttribute("session_user", user);
-        //3. Or pass via request scope - only this request (this servlet and dispatched request can see it (bean is destroyed once the request completes
-        request.setAttribute("request_user", user);
+        requestDispatcher.forward(request, response);
 
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        System.out.print("in doPost");
+
+        String username = request.getParameter("username");
+
+        if(username != null && !username.equals("")) {
+
+            System.out.print("username = " + username);
+            User user = new User();
+            user.setName(username);
+            user.setEmail("terry@nosqlyessql.io");
+
+            //We need to pass the bean to the view (/index.jsp)
+            //1. We can pass the bean through global scope - all requests (jsp or servlet) can see it
+            getServletContext().setAttribute("global_user", user);
+            //2. Or pass via session scope - all requests for this user (session) can see it
+            request.getSession().setAttribute("session_user", user);
+            //3. Or pass via request scope - only this request (this servlet and dispatched request can see it (bean is destroyed once the request completes
+            request.setAttribute("request_user", user);
+
+        }
+
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
         //Dispatch request to the view
-        //1. if we use include, the request can be sent to the jsp, but returns here for further processing (i.e. after user has seen the JSP response)
+        // 1. if we use include, the request can be sent to the jsp, but returns here for further processing (i.e. after user has seen the JSP response)
         // 2. if we use forward the request finishes at the forwarded jsp
         requestDispatcher.forward(request, response);
     }

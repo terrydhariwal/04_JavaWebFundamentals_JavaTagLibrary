@@ -48,6 +48,11 @@
         <div class="container">
             <h3> Example of using custom java classes (User and MyCustomApplicationSettings) </h3>
 
+            <form action="/home" method="post" >
+                <input type="text" name="username" />
+                <input type="submit" />
+            </form>
+
             <div class="${app_settings.scriptletsAndJSPExpressions_CssClass}">
                 <!-- Funny thing I've found is that for EL to work, you must begin with a lowercase for the attribute - even though the attribute in the bean may start with a upper case!! -->
                 <h4>Using JSP Scriplets and JSP Expressions</h4>
@@ -55,27 +60,32 @@
                         They can contain Java code
                 --%>
                 <%
-                    User g_user = (User) request.getServletContext().getAttribute("global_user");
-                    if (g_user == null) {
-                        g_user = new User();
-                    }
+//                    User g_user = (User) request.getServletContext().getAttribute("global_user");
+//                    if (g_user == null) {
+//                        g_user = new User();
+//                    }
                     User s_user = (User) request.getSession().getAttribute("session_user");
                     if (s_user == null) {
                         s_user = new User();
                     }
-                    User r_user = (User) request.getAttribute("request_user");
-                    if (r_user == null) {
-                        r_user = new User();
-                    }
+//                    User r_user = (User) request.getAttribute("request_user");
+//                    if (r_user == null) {
+//                        r_user = new User();
+//                    }
                 %>
                 <%-- JSP Expressions start/end with <%= ... %%>
                       They are used to insert data onto the page
                       And expression is transformed into a statement
                       The value of the statement is converted to a String Object and inserts it into the implicit out object
                 --%>
-                Global scope: Welcome <%= g_user.getName() %>   <br/>
-                Session scope: Welcome <%= s_user.getName() %> <br/>
-                Request scope: Welcome <%= r_user.getName() %> <br/>
+                <c:if test="${ !empty session_user.name }"><!-- I only know how to test against expression language -->
+                    <%--Global scope: Welcome <%= g_user.getName() %>   <br/>--%>
+                    Session scope: Welcome <%= s_user.getName() %> <br/>
+                    <%--Request scope: Welcome <%= r_user.getName() %> <br/>--%>
+                </c:if>
+                <c:if test="${ empty session_user.name }">
+                    Welcome whoever you are </br>
+                </c:if>
             </div>
         </div>
 
@@ -83,9 +93,14 @@
             <div class="${ app_settings.expressionsLanguage_CssClass }">
                 <!-- Funny thing I've found is that for EL to work, you must begin with a lowercase for the attribute - even though the attribute in the bean may start with a upper case!! -->
                 <h4>Using Expression Language which is much simpler ...</h4>
-                Global Scope: Welcome ${ global_user.name } </br>
-                Session Scope: Welcome ${ session_user.name } </br>
-                Request Scope: Welcome ${ request_user.name } </br>
+                <c:if test="${ !empty session_user.name }">
+                    <%--Global Scope: Welcome ${ global_user.name } </br>--%>
+                    Session Scope: Welcome ${ session_user.name } </br>
+                    <%--Request Scope: Welcome ${ request_user.name } </br>--%>
+                </c:if>
+                <c:if test="${ empty session_user.name }">
+                    Welcome whoever you are </br>
+                </c:if>
             </div>
         </div>
 

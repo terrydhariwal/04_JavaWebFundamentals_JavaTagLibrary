@@ -34,69 +34,6 @@
         </div>
     </div>
 
-    <div class="container">
-        <br/><br/>
-        <h4>Java Tag Library Hello world example</h4>
-        <c:out value="Hello world!!"/>
-        <br/><br/>
-    </div>
-
-    <div class="container">
-        <div class="row-fluid">
-            <div class="col-md-9">
-                <div class="container">
-                    <ul class="nav nav-tabs">
-                        <li><a href="#home" data-toggle="tab">${app_settings.tabNames[0]}</a></li>
-                        <li><a href="#other" data-toggle="tab">${app_settings.tabNames[1]}</a></li>
-                        <li><a href="#message" data-toggle="tab">${app_settings.tabNames[2]}</a></li>
-                        <li><a href="#settings" data-toggle="tab">${app_settings.tabNames[3]}</a></li>
-                    </ul>
-                </div>
-
-                <div class="container">
-                    <div class="${app_settings.scriptletsAndJSPExpressions_CssClass}">
-                        <!-- Funny thing I've found is that for EL to work, you must begin with a lowercase for the attribute - even though the attribute in the bean may start with a upper case!! -->
-                        <h2>Using JSP Scriplets and JSP Expressions</h2>
-                        <%--  JSP Scriptlets start/end with <% ... %>
-                                They can contain Java code
-                        --%>
-                        <%
-                            User g_user = (User) request.getServletContext().getAttribute("global_user");
-                            if (g_user == null) {
-                                g_user = new User();
-                            }
-                            User s_user = (User) request.getSession().getAttribute("session_user");
-                            if (s_user == null) {
-                                s_user = new User();
-                            }
-                            User r_user = (User) request.getAttribute("request_user");
-                            if (r_user == null) {
-                                r_user = new User();
-                            }
-                        %>
-                        <%-- JSP Expressions start/end with <%= ... %%>
-                              They are used to insert data onto the page
-                              And expression is transformed into a statement
-                              The value of the statement is converted to a String Object and inserts it into the implicit out object
-                        --%>
-                        Global scope: Welcome <%= g_user.getName() %>   <br/>
-                        Session scope: Welcome <%= s_user.getName() %> <br/>
-                        Request scope: Welcome <%= r_user.getName() %> <br/>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="${ app_settings.expressionsLanguage_CssClass }">
-                        <!-- Funny thing I've found is that for EL to work, you must begin with a lowercase for the attribute - even though the attribute in the bean may start with a upper case!! -->
-                        <h2>Using Expression Language which is much simpler ...</h2>
-                        Global Scope: Welcome ${ global_user.name } </br>
-                        Session Scope: Welcome ${ session_user.name } </br>
-                        Request Scope: Welcome ${ request_user.name } </br>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </section>
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
