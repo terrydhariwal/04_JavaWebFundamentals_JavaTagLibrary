@@ -120,7 +120,7 @@
 
                 <h4>Expression Language - iterations (forEach and forToken) </h4>
 
-                <h3>forEach</h3>
+                <h5>forEach</h5>
                 <p>
                     The &lt;c:forEach&gt; tag is the more commonly used tag because it iterates over a collection of objects.
                 </p>
@@ -130,7 +130,7 @@
                     </c:forEach>
                 </ul>
 
-                <h3>forToken</h3>
+                <h5>forToken</h5>
                 <p>
                     The &lt;c:forTokens&gt; tag is used to break a string into tokens and iterate through each of the tokens.
                 </p>
