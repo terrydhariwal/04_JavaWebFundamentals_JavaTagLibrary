@@ -2,6 +2,7 @@ package io.nosqlyessql.mvc.controllers;
 
 import io.nosqlyessql.mvc.model.MyCustomApplicationSettings;
 import io.nosqlyessql.mvc.model.User;
+import io.nosqlyessql.mvc.model.Tab;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -35,7 +36,7 @@ public class ControllerServlet extends HttpServlet {
         globalAppsettings.setExpressionsLanguage_CssClass("blueUser");
 
         //Demonstrating access to nested properties via EL
-        String [] tabNames = {"SignIn","Home","Profile","Settings"};
+        Tab [] tabNames = { new Tab("SignIn", "#signIn"),new Tab("Home", "#home"), new Tab("Profile", "#profile"), new Tab("Settings", "#setting")};
         globalAppsettings.setTabNames(tabNames);
         getServletContext().setAttribute("app_settings", globalAppsettings);
 

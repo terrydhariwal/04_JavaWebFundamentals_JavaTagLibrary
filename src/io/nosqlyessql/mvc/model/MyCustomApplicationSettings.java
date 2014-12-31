@@ -4,7 +4,7 @@ public class MyCustomApplicationSettings {
 
     private String ScriptletsAndJSPExpressions_CssClass = ""; //NOTE - for EL to work, member variables referenced in JSP need to start with lower case - even if this starts with uppercase!!!
     private String ExpressionsLanguage_CssClass = ""; //NOTE - for EL to work, member variables referenced in JSP need to start with lower case - even if this starts with uppercase!!!
-    private String [] tabNames;
+    private Tab [] tabNames;
 
     public String getScriptletsAndJSPExpressions_CssClass() {
         return ScriptletsAndJSPExpressions_CssClass;
@@ -22,11 +22,11 @@ public class MyCustomApplicationSettings {
         this.ExpressionsLanguage_CssClass = expressionsLanguage_CssClass;
     }
 
-    public String[] getTabNames() {
+    public Tab [] getTabNames() {
         return tabNames;
     }
 
-    public void setTabNames(String[] tabNames) {
+    public void setTabNames(Tab [] tabNames) {
         this.tabNames = tabNames;
     }
 

@@ -110,13 +110,33 @@
 
         <div class="container">
             <div class=" yellow">
-            <h4>Expression Language - accessing nesting properties</h4>
-            <ul class="nav nav-tabs">
-                <li><a href="#home" data-toggle="tab">${app_settings.tabNames[0]}</a></li>
-                <li><a href="#other" data-toggle="tab">${app_settings.tabNames[1]}</a></li>
-                <li><a href="#message" data-toggle="tab">${app_settings.tabNames[2]}</a></li>
-                <li><a href="#settings" data-toggle="tab">${app_settings.tabNames[3]}</a></li>
-            </ul>
+                <h4>Expression Language - accessing nesting properties </h4>
+                <ul class="nav nav-tabs">
+                    <li><a href="#home" data-toggle="tab">${app_settings.tabNames[0].name}</a></li>
+                    <li><a href="#other" data-toggle="tab">${app_settings.tabNames[1].name}</a></li>
+                    <li><a href="#message" data-toggle="tab">${app_settings.tabNames[2].name}</a></li>
+                    <li><a href="#settings" data-toggle="tab">${app_settings.tabNames[3].name}</a></li>
+                </ul>
+
+                <h4>Expression Language - iterations (forEach and forToken) </h4>
+
+                <h3>forEach</h3>
+                <p>
+                    The &lt;c:forEach&gt; tag is the more commonly used tag because it iterates over a collection of objects.
+                </p>
+                <ul class="nav nav-tabs">
+                    <c:forEach items="${ app_settings.tabNames}" var="tab">
+                        <li><a href="${tab.url}" data-toggle="tab">${tab.name}</a></li>
+                    </c:forEach>
+                </ul>
+
+                <h3>forToken</h3>
+                <p>
+                    The &lt;c:forTokens&gt; tag is used to break a string into tokens and iterate through each of the tokens.
+                </p>
+                <c:forTokens items="Zara,nuha,roshy" delims="," var="name">
+                    <c:out value="${name}"/><br />
+                </c:forTokens>
             </div>
         </div>
 
@@ -129,6 +149,10 @@
             <strong>${global_user.name == "Terry"}</strong>
             </div>
         </div>
+
+        <br />
+        <br />
+
 
     </div>
 </section>
