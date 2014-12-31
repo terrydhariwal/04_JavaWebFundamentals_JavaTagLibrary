@@ -47,7 +47,7 @@ ${_header}
         <div class="container">
             <h3> Example of using standard java classes (similar to custom User class) </h3>
             <%
-                Calendar calendar = Calendar.getInstance(); // Java Scriptlet to instantiate Calendar object
+                Calendar calendar = Calendar.getInstance(); // JSP Scriptlet to instantiate Calendar object
             %>
             <%= calendar.getTime().toString() %> <!-- Java expression to output time -->
         </div>
@@ -55,7 +55,8 @@ ${_header}
         <div class="container">
             <h3> Example of using custom java classes (User and MyCustomApplicationSettings) </h3>
 
-            <form action="/home" method="post" id="username-form">
+            <%--<form action="/home" method="post" id="username-form">--%>
+            <form action='<c:url value="/home" />' method="post" id="username-form">
                 <input type="text" name="username" />
                 <select name="path" >
                     <option name="if" selected>if</option>
@@ -103,7 +104,7 @@ ${_header}
         <div class="container">
             <div class="${ app_settings.expressionsLanguage_CssClass }">
                 <!-- Funny thing I've found is that for EL to work, you must begin with a lowercase for the attribute - even though the attribute in the bean may start with a upper case!! -->
-                <h4>Using Expression Language which is much simpler</h4>
+                <h4>Using JSP Expression Language (EL) which is much simpler</h4>
                 <c:if test="${ !empty session_user.name }">
                     <%--Global Scope: Welcome ${ global_user.name } </br>--%>
                     Session Scope: Welcome ${ session_user.name } </br>
@@ -117,7 +118,7 @@ ${_header}
 
         <div class="container">
             <div class=" yellow">
-                <h4>Expression Language - accessing nesting properties </h4>
+                <h4>JSP Expression Language (EL) - accessing nesting properties </h4>
                 <ul class="nav nav-tabs">
                     <li><a href="#home" data-toggle="tab">${app_settings.tabNames[0].name}</a></li>
                     <li><a href="#other" data-toggle="tab">${app_settings.tabNames[1].name}</a></li>
@@ -125,7 +126,7 @@ ${_header}
                     <li><a href="#settings" data-toggle="tab">${app_settings.tabNames[3].name}</a></li>
                 </ul>
 
-                <h4>Expression Language - iterations (forEach and forToken) </h4>
+                <h4>JSP Expression Language (EL) - iterations (forEach and forToken) </h4>
 
                 <h5>forEach</h5>
                 <p>
@@ -150,11 +151,10 @@ ${_header}
 
         <div class="container">
             <div class="green">
-            <h4>Expression Language operators:</h4>
-            &#36;&#123;3+2&#125; equates to <strong>${3+2}</strong>, <br/>
-            &#36;&#123;2==1&#125; equates to <strong>${2 == 1}</strong>, <br/>
-            &#36;&#123;global_user.name == "Terry"&#125; equates to
-            <strong>${global_user.name == "Terry"}</strong>
+                <h4>JSP Expression Language (EL) - operators:</h4>
+                &#36;&#123;3+2&#125; equates to <strong>${3+2}</strong>, <br/>
+                &#36;&#123;2==1&#125; equates to <strong>${2 == 1}</strong>, <br/>
+                &#36;&#123;global_user.name == "Terry"&#125; equates to <strong>${global_user.name == "Terry"}</strong>
             </div>
         </div>
 
