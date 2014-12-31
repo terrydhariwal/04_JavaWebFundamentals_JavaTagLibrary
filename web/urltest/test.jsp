@@ -11,7 +11,7 @@
 </div>
 
 <div>
-  <a href="signup.jsp">This is relative to the current directory</a>
+  <a href="signup.jsp">This is relative to the current page</a>
 </div>
 
 <div>
