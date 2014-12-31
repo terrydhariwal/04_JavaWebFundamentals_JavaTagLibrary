@@ -25,7 +25,14 @@
 
 <body>
 
-<%@include file="_header.jsp" %>
+<%--<%@include file="_header.jsp" %>--%>
+<%--The import tag is like include but can include html from this application (context), or another application (another context) or from an entirely different server --%>
+<c:import url="_header.jsp" />
+<%--In addition rather than just including the value into the page, we can store the resource into a string, so we can reuse it without the overhead of re-importing--%>
+<c:import url="_header.jsp" var="_header" />
+${_header}
+${_header}
+
 
 <section class="main container-fluid">
     <div class="container">

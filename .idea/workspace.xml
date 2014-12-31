@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8c9f68d8-aeef-4b52-9da1-e0ad09ff50dc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/if_example.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/if_example.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/index.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="04_JavaTagLibrary.iws" />
@@ -29,31 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1855" max-vertical-offset="2520">
-              <caret line="110" column="1" selection-start-line="110" selection-start-column="1" selection-end-line="154" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="choose_example.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/choose_example.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="2580">
-              <caret line="158" column="14" selection-start-line="158" selection-start-column="14" selection-end-line="158" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="if_example.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/if_example.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6765677" vertical-offset="1570" max-vertical-offset="2520">
-              <caret line="132" column="19" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.7920792" vertical-offset="0" max-vertical-offset="2625">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,9 +54,9 @@
         <option value="$PROJECT_DIR$/src/io/nosqlyessql/mvc/model/MyCustomApplicationSettings.java" />
         <option value="$PROJECT_DIR$/src/io/nosqlyessql/mvc/controllers/ControllerServlet.java" />
         <option value="$PROJECT_DIR$/src/io/nosqlyessql/mvc/model/Tab.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/index.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/choose_example.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/if_example.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/index.jsp" />
       </list>
     </option>
   </component>
@@ -722,12 +703,12 @@
       <workItem from="1419987811021" duration="2000" />
       <workItem from="1419987996536" duration="874000" />
       <workItem from="1419989225449" duration="11692000" />
-      <workItem from="1420003280213" duration="46000" />
+      <workItem from="1420003280213" duration="758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15355000" />
+    <option name="totallyTimeSpent" value="16067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1097" extended-state="6" />
@@ -911,26 +892,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/index.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/if_example.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1855" max-vertical-offset="2520">
-          <caret line="110" column="1" selection-start-line="110" selection-start-column="1" selection-end-line="154" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.678808" vertical-offset="1570" max-vertical-offset="2520">
+          <caret line="132" column="19" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/choose_example.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="2580">
+        <state vertical-scroll-proportion="1.8692054" vertical-offset="1241" max-vertical-offset="2580">
           <caret line="158" column="14" selection-start-line="158" selection-start-column="14" selection-end-line="158" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/if_example.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6765677" vertical-offset="1570" max-vertical-offset="2520">
-          <caret line="132" column="19" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.7920792" vertical-offset="0" max-vertical-offset="2625">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
