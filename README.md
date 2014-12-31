@@ -1,11 +1,15 @@
 04_JavaTagLibrary
 =================
 
-Use http://localhost:8080/myapp/urltest/test.jsp to demo how to use normal Java (scriptlets <% ... %> & java expressions <%= ... %>)
+Use [http://localhost:8080/myapp/urltest/test.jsp](http://localhost:8080/myapp/urltest/test.jsp) to:
 
-Use http://localhost:8080/myapp/urltest/test.jsp to demo how to use expression language (${...})
+1. demo how to use normal Java 
+	* **JSP Scriptlets** ```<% ... %>``` 
+	* & **JSP expressions** ```<%= ... %>```
+2. demo how to use **JSP - Expression Language (EL)** 
+	* ```${ ... }```
+3. to test the **conditional** (```if``` and ```choose```), **iteration** (```forEach``` and ```forTokens```) and the ```<c:import>``` tags
 
-Use http://localhost:8080/myapp/home to test the conditional, iteration and import tags
 
-Use http://localhost:8080/myapp/urltest/test.jsp to test the URL tag
+Use [http://localhost:8080/myapp/urltest/test.jsp](http://localhost:8080/myapp/urltest/test.jsp) to test the ```<c:url>``` tag
 
