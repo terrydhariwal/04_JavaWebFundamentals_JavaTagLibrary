@@ -59,7 +59,7 @@
 
             <div class="${app_settings.scriptletsAndJSPExpressions_CssClass}">
                 <!-- Funny thing I've found is that for EL to work, you must begin with a lowercase for the attribute - even though the attribute in the bean may start with a upper case!! -->
-                <h4>Using JSP Scriplets and JSP Expressions</h4>
+                <h4>Using JSP Scriplets and JSP Expressions ... choose example</h4>
                 <%--  JSP Scriptlets start/end with <% ... %>
                         They can contain Java code
                 --%>
@@ -82,29 +82,33 @@
                       And expression is transformed into a statement
                       The value of the statement is converted to a String Object and inserts it into the implicit out object
                 --%>
-                <c:if test="${ !empty session_user.name }"><!-- I only know how to test against expression language -->
-                    <%--Global scope: Welcome <%= g_user.getName() %>   <br/>--%>
-                    Session scope: Welcome <%= s_user.getName() %> <br/>
-                    <%--Request scope: Welcome <%= r_user.getName() %> <br/>--%>
-                </c:if>
-                <c:if test="${ empty session_user.name }">
-                    Welcome whoever you are </br>
-                </c:if>
+                <c:choose>
+                    <c:when test="${ !empty session_user.name }"><!-- I only know how to test against expression language -->
+                        <%--Global scope: Welcome <%= g_user.getName() %>   <br/>--%>
+                        Session scope: Welcome <%= s_user.getName() %> <br/>
+                        <%--Request scope: Welcome <%= r_user.getName() %> <br/>--%>
+                    </c:when>
+                    <c:otherwise>
+                        Welcome whoever you are </br>
+                    </c:otherwise>
+                </c:choose>
             </div>
         </div>
 
         <div class="container">
             <div class="${ app_settings.expressionsLanguage_CssClass }">
                 <!-- Funny thing I've found is that for EL to work, you must begin with a lowercase for the attribute - even though the attribute in the bean may start with a upper case!! -->
-                <h4>Using Expression Language which is much simpler</h4>
-                <c:if test="${ !empty session_user.name }">
-                    <%--Global Scope: Welcome ${ global_user.name } </br>--%>
-                    Session Scope: Welcome ${ session_user.name } </br>
-                    <%--Request Scope: Welcome ${ request_user.name } </br>--%>
-                </c:if>
-                <c:if test="${ empty session_user.name }">
-                    Welcome whoever you are </br>
-                </c:if>
+                <h4>Using Expression Language which is much simpler ... choose example</h4>
+                <c:choose>
+                    <c:when test="${ !empty session_user.name }">
+                        <%--Global Scope: Welcome ${ global_user.name } </br>--%>
+                        Session Scope: Welcome ${ session_user.name } </br>
+                        <%--Request Scope: Welcome ${ request_user.name } </br>--%>
+                    </c:when>
+                    <c:otherwise>
+                        Welcome whoever you are </br>
+                    </c:otherwise>
+                </c:choose>
             </div>
         </div>
 

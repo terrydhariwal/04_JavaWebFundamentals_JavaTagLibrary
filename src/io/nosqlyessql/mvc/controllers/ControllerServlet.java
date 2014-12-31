@@ -29,7 +29,7 @@ public class ControllerServlet extends HttpServlet {
         appLevelParam = getServletContext().getInitParameter("AppLevelParam");
 
         // setting application settings using application level parameter "app_settings"
-        System.out.print("in ControllerServlet init");
+        System.out.println("in ControllerServlet init");
         MyCustomApplicationSettings globalAppsettings = new MyCustomApplicationSettings();
         globalAppsettings.setScriptletsAndJSPExpressions_CssClass("redUser");
         globalAppsettings.setExpressionsLanguage_CssClass("blueUser");
@@ -52,13 +52,15 @@ public class ControllerServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        System.out.print("in doPost");
+        System.out.println("in doPost");
 
         String username = request.getParameter("username");
+        System.out.println("username = " + username);
+        String path = request.getParameter("path");
+        System.out.println("path = " + path);
 
         if(username != null && !username.equals("")) {
 
-            System.out.print("username = " + username);
             User user = new User();
             user.setName(username);
             user.setEmail("terry@nosqlyessql.io");
@@ -73,7 +75,14 @@ public class ControllerServlet extends HttpServlet {
 
         }
 
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
+        RequestDispatcher requestDispatcher = requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
+        if(path.equals("if")) {
+            requestDispatcher = requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/if_example.jsp");
+        }
+        else if(path.equals("choose")) {
+            requestDispatcher = requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/choose_example.jsp");
+        }
+
         //Dispatch request to the view
         // 1. if we use include, the request can be sent to the jsp, but returns here for further processing (i.e. after user has seen the JSP response)
         // 2. if we use forward the request finishes at the forwarded jsp

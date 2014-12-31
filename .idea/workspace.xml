@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8c9f68d8-aeef-4b52-9da1-e0ad09ff50dc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/nosqlyessql/mvc/controllers/ControllerServlet.java" afterPath="$PROJECT_DIR$/src/io/nosqlyessql/mvc/controllers/ControllerServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/errorpage.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/errorpage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/index.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/index.jsp" />
     </list>
     <ignored path="04_JavaTagLibrary.iws" />
@@ -33,8 +32,8 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.479339" vertical-offset="0" max-vertical-offset="2100">
-              <caret line="100" column="49" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="49" />
+            <state vertical-scroll-proportion="-0.041322313" vertical-offset="1495" max-vertical-offset="2160">
+              <caret line="98" column="67" selection-start-line="98" selection-start-column="67" selection-end-line="98" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -43,11 +42,31 @@
       <file leaf-file-name="ControllerServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/io/nosqlyessql/mvc/controllers/ControllerServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="706" max-vertical-offset="1335">
-              <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1470">
+              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="choose_example.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/choose_example.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.5" vertical-offset="1110" max-vertical-offset="2220">
+              <caret line="102" column="63" selection-start-line="102" selection-start-column="63" selection-end-line="102" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="if_example.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/if_example.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.875" vertical-offset="1113" max-vertical-offset="2160">
+              <caret line="98" column="82" selection-start-line="98" selection-start-column="82" selection-end-line="98" selection-end-column="82" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,6 +83,8 @@
         <option value="$PROJECT_DIR$/web/app.css" />
         <option value="$PROJECT_DIR$/web/WEB-INF/errorpage.jsp" />
         <option value="$PROJECT_DIR$/src/io/nosqlyessql/mvc/controllers/ControllerServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/if_example.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/choose_example.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/index.jsp" />
       </list>
     </option>
@@ -229,6 +250,11 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="LayoutCode.rearrangeEntriesJSP" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/WEB-INF" />
+    </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat Local 8.0">
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
@@ -701,12 +727,12 @@
       <workItem from="1419984069890" duration="2455000" />
       <workItem from="1419987811021" duration="2000" />
       <workItem from="1419987996536" duration="874000" />
-      <workItem from="1419989225449" duration="5718000" />
+      <workItem from="1419989225449" duration="8850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9335000" />
+    <option name="totallyTimeSpent" value="12467000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1097" extended-state="6" />
@@ -834,18 +860,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/io/nosqlyessql/mvc/controllers/ControllerServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="706" max-vertical-offset="1335">
-          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1470">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/if_example.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.875" vertical-offset="1113" max-vertical-offset="2160">
+          <caret line="98" column="82" selection-start-line="98" selection-start-column="82" selection-end-line="98" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/choose_example.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5" vertical-offset="1110" max-vertical-offset="2220">
+          <caret line="102" column="63" selection-start-line="102" selection-start-column="63" selection-end-line="102" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.479339" vertical-offset="0" max-vertical-offset="2100">
-          <caret line="100" column="49" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="49" />
+        <state vertical-scroll-proportion="-0.041322313" vertical-offset="1495" max-vertical-offset="2160">
+          <caret line="98" column="67" selection-start-line="98" selection-start-column="67" selection-end-line="98" selection-end-column="67" />
           <folding />
         </state>
       </provider>
