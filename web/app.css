@@ -3,5 +3,14 @@
 }
 
 .blueUser {
-    background-color: cornflowerblue;
+    /*background-color: cornflowerblue;*/
+    background-color: deepskyblue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: greenyellow;
 }
